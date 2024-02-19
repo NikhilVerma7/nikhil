@@ -13,26 +13,19 @@ const ItemList = ({items,resimg}) => {
     const handleAddItem=(item)=>{
         dispatch(addItem(item));
         dispatch(addsingle(item?.card?.info?.id));
-      //   const frequency = fre;
-      //      if (frequency[item?.card?.info?.id]) {
-      //   frequency[item?.card?.info?.id]++;
-      // } else {
-      //   frequency[item?.card?.info?.id] = 1;
-      // }
-      // setFre(frequency);
+  
     }
     const handleSubtractItem=(item)=>{
       dispatch(removeItem(item));
       dispatch(removesingle(item?.card?.info?.id));
-      // const frequency = fre;
-      // frequency[item?.card?.info?.id]--;
-      // setFre(frequency);
+     
   }
  
   return (
     <div>
-    {items.map((item)=>(
-        <div className="flex justify-between items-center h-[200px] border-b-2">  
+    {items.map((item)=>( 
+        < div className="flex justify-between items-center h-[200px] border-b-2" key={item?.card?.info?.id}> 
+         
               <div key={item?.card?.info?.id} className="p-2 m-2  border-gray-200  text-left"> 
         
             <div className="py-2">
