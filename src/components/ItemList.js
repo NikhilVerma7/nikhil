@@ -29,7 +29,6 @@ const ItemList = ({items,resimg}) => {
       // setFre(frequency);
   }
  
-
   return (
     <div>
     {items.map((item)=>(

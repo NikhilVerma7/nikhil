@@ -13,5 +13,4 @@ const User = (props) => {
     </div>
   );
 };
-
 export default User;

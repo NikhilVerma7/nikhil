@@ -51,5 +51,4 @@ const NumberGuess = () => {
     </div>
   );
 };
-
 export default NumberGuess;

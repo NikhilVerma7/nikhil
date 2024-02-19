@@ -23,5 +23,4 @@ const useOnline = () => {
 
   return isOnline;
 };
-
 export default useOnline;

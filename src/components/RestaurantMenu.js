@@ -9,7 +9,7 @@ import { LuDot } from "react-icons/lu";
 const RestaurantMenu = () => {
 
 
-  const {resId} =useParams();
+const {resId} =useParams();
    const resInfo= useRestaurantMenu(resId);
 
    const [showIndex,setShowIndex]= useState(0);

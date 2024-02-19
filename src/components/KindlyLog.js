@@ -11,5 +11,4 @@ const KindlyLog = () => {
     </div>
   )
 }
-
 export default KindlyLog;

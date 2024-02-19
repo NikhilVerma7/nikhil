@@ -36,5 +36,4 @@ const OrderPlace = () => {
 
    
 }
-
 export default OrderPlace;

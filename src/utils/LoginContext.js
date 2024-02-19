@@ -6,5 +6,4 @@ const LoginContext = createContext({
    
   },
 });
-
 export default LoginContext;

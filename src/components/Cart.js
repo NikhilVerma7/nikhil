@@ -6,7 +6,6 @@ import FullCart from "./FullCart";
 
 
 
-
 const Cart = () => {
     const cartItems= useSelector((store)=>store.cart.items);
   

@@ -10,8 +10,7 @@ import NumberGuess from "./NumberGuess";
 import { IoIosSearch } from "react-icons/io";
 
 const Body = () => {
-  
-    const [listofRestaurants, setListofRestaurants] = useState([]);
+  const [listofRestaurants, setListofRestaurants] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const[searchText,setSearchText]=useState("");
     const [location, city] = useLocation1();

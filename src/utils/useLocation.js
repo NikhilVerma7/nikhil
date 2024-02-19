@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
-
 const useLocation1 = () => {
   const [location, setLocation] = useState(null);
   const [city,setCity] = useState(null)

@@ -51,7 +51,6 @@ const Heading = () => {
   );  
 };
 
-
 const Header=()=>{
 
   const [btnNameReact,setBtnNameReact]= useState("Login");

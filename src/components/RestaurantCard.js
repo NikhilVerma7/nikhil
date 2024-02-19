@@ -7,7 +7,6 @@ const RestaurantCard=(props)=>{
 
     return (
 
-
       <div className="m-4 p-4 w-[300px] h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 rounded-xl" >
          {/* <h2>{t} </h2> */}
         <img className="h-[200px] w-full rounded-xl" src={CDN_URL+resData.info.cloudinaryImageId}/>

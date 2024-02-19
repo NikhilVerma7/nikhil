@@ -18,5 +18,4 @@ const Shimmer=()=>{
         <div className="m-[20px] w-[200px] h-[400px]"> </div>
     </div>);
 };
-
 export default Shimmer;

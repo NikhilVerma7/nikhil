@@ -85,7 +85,6 @@ const FullCart = () => {
         </div>
 
        
-
    </div>
        
 
