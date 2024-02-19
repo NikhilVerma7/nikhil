@@ -4,6 +4,8 @@ import ItemList from "./ItemList";
 import { clearCart } from "../utils/cartSlice";
 import OrderPlace from "./OrderPlace";
 import { Link } from "react-router-dom";
+import {addItem, removeItem} from "../utils/cartSlice";
+import { useState } from "react";
 
 
 const FullCart = () => {
@@ -15,12 +17,17 @@ const FullCart = () => {
         dispatch(clearCart());
     }
 
-  
+    // const [cc,setCC]=useState([]);
+    // setCC(cartItems);
 
   let price=0;
     cartItems.map((item)=>(
        price+= item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100
     ));
+ 
+    // const [unique,setUnique]=useState([]);
+   const unique=[...new Set(cartItems)];
+    // setUnique(a);
   return (
    
       
@@ -31,7 +38,7 @@ const FullCart = () => {
             <button className="bg-gray-300 text-gray-900  text-lg w-[100px] h-[50px] font-bold rounded-xl hover:bg-gray-200" onClick={handleClearCart}>Clear Cart</button>
             </div>
          
-            <ItemList items={cartItems} />   
+            <ItemList items={unique} />   
         </div>
 
         <div className="">

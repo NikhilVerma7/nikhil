@@ -1,10 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice ,current } from "@reduxjs/toolkit";
 
 const cartSlice =createSlice({
 
     name:'cart',
     initialState:{
-        items:[]
+        items:[],
+        fre:{}
     },  
     reducers:{
         addItem:(state,action)=>{
@@ -12,14 +13,30 @@ const cartSlice =createSlice({
         },
         
         removeItem:(state,action)=>{
-            state.items.pop();
+
+            let a = current(state.items);
+            let b = a.indexOf(action.payload);
+            state.items.splice(b, 1);
         },
      
         clearCart:(state)=>{
-            state.items.length=0;
+            state.items=[];
+            state.fre={};
+        },
+
+        addsingle:(state,action)=>{
+            if (state.fre[action.payload]) {
+                state.fre[action.payload]++;
+              } else {
+                state.fre[action.payload] = 1;
+              }
+           
+        },
+        removesingle:(state,action)=>{
+            state.fre[action.payload]==0 ?state.fre[action.payload]=0:state.fre[action.payload]--;
         },
     },
 });
 
-export const {addItem,removeItem,clearCart}= cartSlice.actions;
+export const {addItem,removeItem,clearCart,addsingle,removesingle}= cartSlice.actions;
 export default cartSlice.reducer;
