@@ -8,11 +8,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 const OrderPlace = () => {
  
     const { loginWithRedirect,isAuthenticated,user,logout } = useAuth0();
-
+//  const cartItems= useSelector((store)=>store.cart.items);
+//         const dispatch=useDispatch();
+//  dispatch(clearCart());
     if(isAuthenticated){
-        const cartItems= useSelector((store)=>store.cart.items);
-        const dispatch=useDispatch();
-        dispatch(clearCart());
+       
+       
         
           return (
                

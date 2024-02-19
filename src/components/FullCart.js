@@ -77,7 +77,7 @@ const FullCart = () => {
              <KindlyLog/>
            } */}
            <Link to="/final">
-           <button className="bg-green-500 text-white rounded-xl my-8 w-[100px] h-[40px] font-semibold  ml-[130px] hover:bg-green-400" > Place order</button>
+           <button className="bg-green-500 text-white rounded-xl my-8 w-[100px] h-[40px] font-semibold  ml-[130px] hover:bg-green-400 " onClick={handleClearCart} > Place order</button>
            </Link>
            
          
