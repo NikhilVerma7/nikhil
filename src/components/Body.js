@@ -16,9 +16,9 @@ const Body = () => {
     const [location, city] = useLocation1();
 
     useEffect(() => {
-        let loading;
-        toast.remove(loading);
-        loading = toast.loading("Loading", { duration: 2000 });
+        // let loading;
+        // toast.remove(loading);
+        // loading = toast.loading("Loading", { duration: 2000 });
         fetchData();
       }, [location]);
 
@@ -30,20 +30,20 @@ const Body = () => {
       <NumberGuess/>
     )
   }
-  const toastId = (e) => {
-    let id;
-    toast.remove(id);
-    id = toast.custom(
-      <span className="">
-         Sorry, we dont have{" "}
-        <span className="">{e.target.value}</span> right now.
-      </span>,
-      {
-        duration: 500,
-      }
-    );
-    return id;
-  };
+  // const toastId = (e) => {
+  //   let id;
+  //   toast.remove(id);
+  //   id = toast.custom(
+  //     <span className="">
+  //        Sorry, we dont have{" "}
+  //       <span className="">{e.target.value}</span> right now.
+  //     </span>,
+  //     {
+  //       duration: 500,
+  //     }
+  //   );
+  //   return id;
+  // };
 
     // useEffect(() => {
     //     fetchData();
