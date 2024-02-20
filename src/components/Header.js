@@ -12,7 +12,7 @@ import { BsCartFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import Location from "../utils/Location";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import { HiOutlineStatusOnline } from "react-icons/hi";
 const Heading = () => {
   const [loc, city] = useLocation1();
   
@@ -73,7 +73,9 @@ const { loginWithRedirect,isAuthenticated,user,logout } = useAuth0();
         <div className="flex justify-around items-center w-[830px]">
          <ul className="flex p-4 m-4 items-center">
           <li className="px-4 font-medium text-lg">
-            Online: {online?"✅":"🔴"}
+            {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPFFO9PJOFDQv440yLwnDUivUn1arDIOBgA&usqp=CAU"  */}
+            {/* className="bg-green-600 text-green-600 color h-[20px] w-[20px]"></img> */}
+             {online? <HiOutlineStatusOnline className="text-green-700 text-2xl"/>:<HiOutlineStatusOnline className="bg-red-700 text-2xl"/>}
           </li>
           
       
