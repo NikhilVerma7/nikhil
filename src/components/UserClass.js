@@ -7,7 +7,6 @@ class UserClass extends React.Component {
      this.state={
        userInfo:{
         name:"Dummy",
-        location: "Default", 
        }
      }
     }
