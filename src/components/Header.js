@@ -28,7 +28,7 @@ const Heading = () => {
           />
         </div>
       </a>
-      <div className="mt-9 mr-[500px] text-xl flex ">
+      <div className="mt-9 mr-[500px] text-xl flex ml-[30px]">
         <CiLocationOn
           style={{
             fontSize: "1.6rem",
@@ -70,7 +70,7 @@ const { loginWithRedirect,isAuthenticated,user,logout } = useAuth0();
         <img className="w-24 ml-10 mt-2"src={LOGO_URL}/>
         </div> */}
   
-        <div className="flex justify-around items-center w-[830px]">
+        <div className="flex justify-around items-center w-[730px]">
          <ul className="flex p-4 m-4 items-center">
           <li className="px-4 font-medium text-lg">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPFFO9PJOFDQv440yLwnDUivUn1arDIOBgA&usqp=CAU"  */}

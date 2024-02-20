@@ -38,13 +38,13 @@ const ItemList = ({items,resimg}) => {
                <h2 className="font-medium"> ₹{item?.card?.info?.price/100||item?.card?.info?.defaultPrice/100}</h2>
                 </div>
 
-                <p className="text-xs font-mono mb-4 w-[700px]">{item?.card?.info?.description||item?.card?.info?.category}</p>
+                <p className="text-xs font-mono mb-4 w-[500px]">{item?.card?.info?.description||item?.card?.info?.category}</p>
     </div>
        <div className="mr-4 mt-4 ">
       
        <img src={CDN_URL+item?.card?.info?.imageId?CDN_URL+item?.card?.info?.imageId:CDN_URL+resimg}  className="w-[150px] h-[100px] rounded-xl mr-4 "/>
     
-         <div className="flex items-center ml-8 mt-2">
+         <div className="flex items-center ml-8 mt-2 ">
   <button 
     className="px-2 bg-white shadow-lg rounded-xl text-green-900 font-bold text-2xl cursor-pointer hover:bg-gray-100"
     onClick={() => handleSubtractItem(item)}
