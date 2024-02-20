@@ -16,20 +16,20 @@ const {resId} =useParams();
   
  if(resInfo.length===0)
  return <Shimmer/>
- const{name,cuisines,costForTwoMessage,areaName,cloudinaryImageId,totalRatingsString,avgRatingString,sla}=resInfo?.cards[0]?.card?.card?.info||[];
+ const{name,cuisines,costForTwoMessage,areaName,cloudinaryImageId,totalRatingsString,avgRatingString,sla}=resInfo?.cards[2]?.card?.card?.info||[];
 
- const itemCards=resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards||
- resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.carousel||[];
+ const itemCards=resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards||
+ resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.carousel||[];
  console.log(resInfo);  
- console.log(itemCards); 
+//  console.log(itemCards); 
  
-const categories=resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+const categories=resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
   (c)=>
   c?.card?.card?.["@type"].includes("ItemCategory")
 );
 
-// console.log(categories);
-
+console.log(cuisines);
+console.log(name);
 
   return  (
     <div className="text-center">
@@ -39,7 +39,7 @@ const categories=resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.fil
  <div className="flex justify-between items-center w-8/12 mx-auto">
         <div>
         <h1 className="font-bold mt-6 text-3xl mb-3 font-sans  ">{name}</h1>
-      <p className="font-thin border-b-2">{cuisines.join(", ")} </p>
+      <p className="font-thin border-b-2">{cuisines.length===0? "" :  cuisines.join(", ")} </p>
       <h1 className="font-thin border-b-2 ">{areaName} - {sla.deliveryTime} minutes</h1>
       <h1 className="font-thin border-b-2 ">{costForTwoMessage}</h1>
       <div className="flex items-center mt-3 ml-3">
