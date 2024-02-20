@@ -75,7 +75,7 @@ const { loginWithRedirect,isAuthenticated,user,logout } = useAuth0();
           <li className="px-4 font-medium text-lg">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPFFO9PJOFDQv440yLwnDUivUn1arDIOBgA&usqp=CAU"  */}
             {/* className="bg-green-600 text-green-600 color h-[20px] w-[20px]"></img> */}
-             {online? <HiOutlineStatusOnline className="text-green-700 text-2xl"/>:<HiOutlineStatusOnline className="bg-red-700 text-2xl"/>}
+             {online? <HiOutlineStatusOnline className="text-green-700 text-2xl"/>:<HiOutlineStatusOnline className="text-red-700 text-2xl"/>}
           </li>
           
       
