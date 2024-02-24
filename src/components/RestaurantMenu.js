@@ -26,7 +26,7 @@ const {resId} =useParams();
 const categories=resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
   (c)=>
   c?.card?.card?.["@type"].includes("ItemCategory")
-);
+)||[];
 
 console.log(cuisines);
 console.log(name);
